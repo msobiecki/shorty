@@ -1,0 +1,163 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "SHORTY SERVICE API",
+    "description": "A SHORTY SERVICE API documentation"
+  },
+  "tags": [
+    {
+      "name": "Shorty",
+      "description": "Everything related with shorty"
+    }
+  ],
+  "paths": {
+    "/shorty/{slug}": {
+      "get": {
+        "tags": ["Shorty"],
+        "summary": "Redirect to shorted url",
+        "description": "Redirect to shorted url",
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "slug",
+            "description": "Shorty slug",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "302": {
+            "description": "Redirect to shorted url"
+          },
+          "400": {
+            "description": "Return a response - bad request error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error_Response"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Return a response - no record exist error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error_Response"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Return a response - internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error_Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/shorty/": {
+      "post": {
+        "tags": ["Shorty"],
+        "summary": "Create short",
+        "description": "Create short",
+        "requestBody": {
+          "description": "Create short",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "slug": {
+                    "type": "string"
+                  },
+                  "address": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Return a response - success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success_Response"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Return a response - bad request error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error_Response"
+                }
+              }
+            }
+          },
+          "409": {
+            "description": "Return a response - internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error_Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8000/api"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "Success_Response": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      },
+      "Error_Response": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "boolean",
+            "default": "false"
+          },
+          "message": {
+            "type": "string"
+          },
+          "errors": {
+            "type": "string"
+          },
+          "stack": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

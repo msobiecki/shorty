@@ -1,0 +1,19 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "shorty",
+    "host": "localhost",
+    "port": 32768,
+    "dialect": "postgres"
+  },
+  "test": {
+    "use_env_variable": "DATABASE_URL"
+  },
+  "staging": {
+    "use_env_variable": "DATABASE_URL"
+  },
+  "production": {
+    "use_env_variable": "DATABASE_URL"
+  }
+}

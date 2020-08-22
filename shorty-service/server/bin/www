@@ -1,0 +1,38 @@
+const http = require('http');
+const app = require('../../app.js');
+const env = process.env.NODE_ENV || 'development';
+const config = require(`../config/config.json`)[env];
+
+const secret = config.use_env_secret
+  ? process.env[config.use_env_secret]
+  : config.secret;
+
+const domain = config.use_env_domain
+  ? process.env[config.use_env_domain]
+  : config.domain;
+
+const hostname = config.use_env_hostname
+  ? process.env[config.use_env_hostname]
+  : config.hostname;
+
+const port = config.use_env_port
+  ? process.env[config.use_env_port]
+  : config.port;
+
+const ssl = config.use_env_ssl
+  ? process.env[config.use_env_ssl]
+  : config.ssl;
+
+app.set('secret', secret);
+
+const httpServer = http.createServer(app);
+httpServer.listen(port, () => {
+  console.log(
+    '🚀 SHORTY SERVICE API ready at',
+    `http${ssl ? 's' : ''}://${domain ? `${domain}` : `${hostname}:${port}`}${app.get('apiPath')}`
+  );
+  console.log(
+    '🚀 SHORTY SERVICE API DOC ready at',
+    `http${ssl ? 's' : ''}://${domain ? `${domain}` : `${hostname}:${port}`}${app.get('apiDocPath')}`
+  );
+});
