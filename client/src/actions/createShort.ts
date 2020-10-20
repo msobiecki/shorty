@@ -1,5 +1,8 @@
-import { throwNotification } from ".";
+import moment from "moment";
 
+import { throwNotification } from "./throwNotification";
+
+import { ADD_LATEST_SHORT } from "../reducers/latestShorts";
 import {
   CREATE_SHORT_REQUEST,
   CREATE_SHORT_RECEIVE,
@@ -23,9 +26,16 @@ export const createShort = ({ address, slug }: CreateShortProps) => (
         if (response.ok) response.json();
         else throw new Error("NOTIFICATION_CREATE_SHORT_REQUEST_ERROR");
       })
-      .then(() =>
-        dispatch({ type: CREATE_SHORT_RECEIVE, payload: { status: "success" } })
-      )
+      .then(() => {
+        dispatch({
+          type: ADD_LATEST_SHORT,
+          payload: { createdAt: moment().unix(), address, slug },
+        });
+        dispatch({
+          type: CREATE_SHORT_RECEIVE,
+          payload: { status: "success" },
+        });
+      })
       .catch((err) => {
         dispatch(throwNotification({ message: err.message }));
         dispatch({ type: CREATE_SHORT_ERROR, payload: { status: "error" } });

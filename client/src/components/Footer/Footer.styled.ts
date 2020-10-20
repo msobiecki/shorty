@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Box as BoxMUI, Typography as TypographyMUI } from "@material-ui/core";
 
 export const Wrapper = styled(BoxMUI)`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   display: flex;
   align-items: center;

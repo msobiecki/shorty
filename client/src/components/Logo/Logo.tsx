@@ -1,8 +1,6 @@
 import React from "react";
 
-import { Typography } from "@material-ui/core";
-
-import { Wrapper } from "./Logo.styled";
+import { Wrapper, Title } from "./Logo.styled";
 
 type LogoProps = {
   children?: string;
@@ -11,7 +9,7 @@ type LogoProps = {
 const Logo = ({ children }: LogoProps) => {
   return (
     <Wrapper>
-      <Typography component="h1">{children}</Typography>
+      <Title>{children}</Title>
     </Wrapper>
   );
 };

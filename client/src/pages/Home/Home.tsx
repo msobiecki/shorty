@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useIntl } from "react-intl";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Header, Logo, Content, Creator, Footer } from "../../components";
+import { Header, Logo, Menu, Content, Creator, Footer } from "../../components";
 
 import config from "../../config";
 
@@ -36,13 +36,14 @@ const Home = () => {
           <Logo>{config.name}</Logo>
           {" | "}
           {intl.formatMessage({ id: "PAGE_TITLE_HOME" })}
+          <Menu />
         </>
       </Header>
       <Content>
         <Creator
           loading={status === "pending" ? true : false}
           title={intl.formatMessage(
-            { id: "HOME_SEARCHER_TITLE" },
+            { id: "HOME_CREATOR_TITLE" },
             { name: config.name }
           )}
           onSubmit={({ address, slug }) =>

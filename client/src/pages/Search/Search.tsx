@@ -7,7 +7,7 @@ import { Header, Logo, Content, Searcher, Footer } from "../../components";
 
 import config from "../../config";
 
-import { createShort } from "../../actions";
+import { searchShort } from "../../actions";
 
 import { RootState } from "../../reducers";
 
@@ -25,7 +25,7 @@ const HomeHelmet = () => {
 const Search = () => {
   const intl = useIntl();
 
-  const { status } = useSelector((state: RootState) => state.createShort);
+  const { status } = useSelector((state: RootState) => state.searchShort);
   const dispatch = useDispatch();
 
   return (
@@ -40,14 +40,12 @@ const Search = () => {
       </Header>
       <Content>
         <Searcher
-          loading={status === "pending" ? true : false}
+          loading={status === "pending" || status === "success" ? true : false}
           title={intl.formatMessage(
-            { id: "HOME_SEARCHER_TITLE" },
-            { name: config.name }
+            { id: "SEARCH_SEARCHER_TITLE" },
+            { name: config.name?.toLowerCase() }
           )}
-          onSubmit={({ address, slug }) =>
-            dispatch(createShort({ address, slug }))
-          }
+          onSubmit={({ slug }) => dispatch(searchShort({ slug }))}
         />
       </Content>
       <Footer>

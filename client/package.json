@@ -17,6 +17,7 @@
     "@types/react-router-dom": "^5.1.6",
     "@types/redux-logger": "^3.0.8",
     "@types/styled-components": "^5.1.4",
+    "moment": "^2.29.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet-async": "^1.0.7",

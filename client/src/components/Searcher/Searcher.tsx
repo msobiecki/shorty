@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useIntl } from "react-intl";
 
 import {
   Wrapper,
@@ -23,16 +24,16 @@ type SearcherProps = {
 type SearcherValuesType = { address?: string; slug?: string };
 
 const Searcher = ({ loading = false, title, onSubmit }: SearcherProps) => {
+  const intl = useIntl();
   const [searcherValues, setSearcherValues] = useState<SearcherValuesType>({
-    address: "",
     slug: "",
   });
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const { address, slug } = searcherValues;
-    onSubmit({ address, slug });
-    setSearcherValues({ address: "", slug: "" });
+    const { slug } = searcherValues;
+    onSubmit({ slug });
+    setSearcherValues({ slug: "" });
   };
 
   const handleInputChange = (
@@ -52,20 +53,11 @@ const Searcher = ({ loading = false, title, onSubmit }: SearcherProps) => {
           <Container>
             <Title variant="h1">{title}</Title>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={12} md={6}>
+              <Grid item xs={12}>
                 <FormControl fullWidth>
-                  <InputLabel htmlFor="search-address">Address</InputLabel>
-                  <Input
-                    id="search-address"
-                    name="address"
-                    value={searcherValues.address}
-                    onChange={(event) => handleInputChange(event)}
-                  />
-                </FormControl>
-              </Grid>
-              <Grid item xs={12} sm={12} md={6}>
-                <FormControl fullWidth>
-                  <InputLabel htmlFor="search-slug">Slug</InputLabel>
+                  <InputLabel htmlFor="search-slug">
+                    {intl.formatMessage({ id: "INPUT_SLUG" })}
+                  </InputLabel>
                   <Input
                     id="search-slug"
                     name="slug"
@@ -76,7 +68,9 @@ const Searcher = ({ loading = false, title, onSubmit }: SearcherProps) => {
               </Grid>
             </Grid>
             <Navigation>
-              <Button type="submit">SHORT IT</Button>
+              <Button type="submit">
+                {intl.formatMessage({ id: "BUTTON_SEARCH" })}
+              </Button>
             </Navigation>
           </Container>
         </Form>
