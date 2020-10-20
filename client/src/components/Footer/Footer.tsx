@@ -1,7 +1,17 @@
 import React from "react";
 
-const Footer = () => {
-  return <div></div>;
+import { Wrapper, Text } from "./Footer.styled";
+
+type FooterProps = {
+  children?: string;
+};
+
+const Footer = ({ children }: FooterProps) => {
+  return (
+    <Wrapper>
+      <Text>{children}</Text>
+    </Wrapper>
+  );
 };
 
 export default Footer;

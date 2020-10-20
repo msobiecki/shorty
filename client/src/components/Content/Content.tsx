@@ -1,7 +1,13 @@
 import React from "react";
 
-const Content = () => {
-  return <div></div>;
+import { Wrapper } from "./Content.styled";
+
+type ContentProps = {
+  children?: JSX.Element | JSX.Element[];
+};
+
+const Content = ({ children }: ContentProps) => {
+  return <Wrapper>{children}</Wrapper>;
 };
 
 export default Content;

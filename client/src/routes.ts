@@ -1,4 +1,4 @@
-import { Home } from "./pages";
+import { Home, Search } from "./pages";
 
 type RouteType = {
   path: string;
@@ -8,6 +8,11 @@ type RouteType = {
 };
 
 const routes: Array<RouteType> = [
+  {
+    path: "/search",
+    exact: true,
+    component: Search,
+  },
   {
     path: "/",
     exact: true,

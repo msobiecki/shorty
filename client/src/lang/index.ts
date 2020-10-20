@@ -2,10 +2,10 @@ import en from "./en";
 
 type LangType = typeof en;
 
-const languages = {
+const lang = {
   en,
 } as {
   [key: string]: LangType;
 };
 
-export default languages;
+export default lang;

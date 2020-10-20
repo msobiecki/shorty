@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useIntl } from "react-intl";
 import { useSelector, useDispatch } from "react-redux";
 
-import { Header, Logo, Content, Creator, Footer } from "../../components";
+import { Header, Logo, Content, Searcher, Footer } from "../../components";
 
 import config from "../../config";
 
@@ -16,13 +16,13 @@ const HomeHelmet = () => {
   return (
     <Helmet>
       <title>
-        {intl.formatMessage({ id: "PAGE_TITLE_HOME" })} | {config.name}
+        {intl.formatMessage({ id: "PAGE_TITLE_SEARCH" })} | {config.name}
       </title>
     </Helmet>
   );
 };
 
-const Home = () => {
+const Search = () => {
   const intl = useIntl();
 
   const { status } = useSelector((state: RootState) => state.createShort);
@@ -35,11 +35,11 @@ const Home = () => {
         <>
           <Logo>{config.name}</Logo>
           {" | "}
-          {intl.formatMessage({ id: "PAGE_TITLE_HOME" })}
+          {intl.formatMessage({ id: "PAGE_TITLE_SEARCH" })}
         </>
       </Header>
       <Content>
-        <Creator
+        <Searcher
           loading={status === "pending" ? true : false}
           title={intl.formatMessage(
             { id: "HOME_SEARCHER_TITLE" },
@@ -62,4 +62,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;
