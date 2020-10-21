@@ -5,6 +5,6 @@ type ThrowNotificationProps = { message?: string };
 export const throwNotification = ({ message }: ThrowNotificationProps) => {
   return {
     type: THROW_NOTIFICATION,
-    payload: { message },
+    payload: { message: message && message.replaceAll(" ", "_").toUpperCase() },
   };
 };
