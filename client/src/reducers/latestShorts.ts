@@ -5,8 +5,8 @@ type LatestShortsState = {
 };
 
 type LatestShortsActionType = {
-  type: string;
-  payload: LatestShortType;
+  type?: string;
+  payload?: LatestShortType;
 };
 
 type LatestShortType = {
@@ -25,9 +25,11 @@ export function latestShortsReducer(
 ): LatestShortsState {
   switch (action.type) {
     case ADD_LATEST_SHORT: {
+      const newShorts = (state.shorts && [...state.shorts.slice(-5)]) || []
+      if(action.payload) newShorts.push(action.payload)
       return {
         ...state,
-        shorts: [...state.shorts.slice(-5), action.payload],
+        shorts: newShorts,
       };
     }
     default:

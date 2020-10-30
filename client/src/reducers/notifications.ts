@@ -5,8 +5,8 @@ type NotificationsState = {
 };
 
 type NotificationActionType = {
-  type: string;
-  payload: NotificationType;
+  type?: string;
+  payload?: NotificationType;
 };
 
 type NotificationType = {
@@ -24,9 +24,11 @@ export function notificationsReducer(
 ): NotificationsState {
   switch (action.type) {
     case THROW_NOTIFICATION: {
+      const newMessages = (state.messages && [...state.messages] ) || []
+      if(action.payload) newMessages.push(action.payload)
       return {
         ...state,
-        messages: [...state.messages, action.payload],
+        messages: newMessages,
       };
     }
     default:
