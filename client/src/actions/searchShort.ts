@@ -22,6 +22,8 @@ export const searchShort = ({ slug }: SearchShortProps) => async (dispatch: any)
           throw new Error("NOTIFICATION_SEARCH_SHORT_NOT_FOUND");
         else if (response.redirected) {
           window.location.href = response.url;
+        } else if(response.ok) {
+          return response.json();
         } else throw new Error("NOTIFICATION_SEARCH_SHORT_REQUEST_ERROR");
       })
       .then(() => {
@@ -32,7 +34,7 @@ export const searchShort = ({ slug }: SearchShortProps) => async (dispatch: any)
         return true;
       })
       .catch((err) => {
-        dispatch(throwNotification({ message: err.message }));
+        dispatch(throwNotification({status: "error", message: err.message }));
         dispatch({ type: SEARCH_SHORT_ERROR, payload: { status: "error" } });
         return false;
       });
