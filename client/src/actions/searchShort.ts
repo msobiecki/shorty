@@ -37,6 +37,7 @@ export const searchShort = ({ slug }: SearchShortProps) => (dispatch: any) => {
   } else
     dispatch(
       throwNotification({
+        status: "warning" ,
         message: "NOTIFICATION_SEARCH_SHORT_EMPTY_FIELD",
       })
     );
