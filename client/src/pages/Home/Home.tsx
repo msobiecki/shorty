@@ -11,9 +11,11 @@ import { createShort } from "../../actions";
 import { RootState } from "../../reducers";
 
 import { Default as DefaultLayout } from "../../layouts";
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
   const intl = useIntl();
+  const history = useHistory();
 
   const { status } = useSelector((state: RootState) => state.createShort);
   const dispatch = useDispatch();
@@ -26,8 +28,9 @@ const Home = () => {
           { id: "HOME_CREATOR_TITLE" },
           { name: config.name }
         )}
-        onSubmit={({ address, slug }) =>
-          dispatch(createShort({ address, slug }))
+        onSubmit={async ({ address, slug }) => {
+            if(await dispatch(createShort({ address, slug }))) history.push('/search');
+          } 
         }
       />
     </DefaultLayout>

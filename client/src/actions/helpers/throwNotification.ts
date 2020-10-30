@@ -1,4 +1,4 @@
-import { THROW_NOTIFICATION } from "../reducers/notifications";
+import { THROW_NOTIFICATION } from "../../reducers/notifications";
 
 type ThrowNotificationProps = { status?: string, message?: string };
 

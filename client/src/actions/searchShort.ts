@@ -1,4 +1,4 @@
-import { throwNotification } from "./throwNotification";
+import { throwNotification } from "./helpers/throwNotification";
 
 import {
   SEARCH_SHORT_REQUEST,
@@ -9,10 +9,10 @@ import {
 import config from "../config";
 
 type SearchShortProps = { slug?: string };
-export const searchShort = ({ slug }: SearchShortProps) => (dispatch: any) => {
+export const searchShort = ({ slug }: SearchShortProps) => async (dispatch: any) => {
   if (slug) {
     dispatch({ type: SEARCH_SHORT_REQUEST, payload: { status: "pending" } });
-    fetch(`${config.api}/shorty/${slug}`, {
+    return await fetch(`${config.api}/shorty/${slug}`, {
       method: "GET",
       redirect: "manual",
     })
@@ -29,16 +29,20 @@ export const searchShort = ({ slug }: SearchShortProps) => (dispatch: any) => {
           type: SEARCH_SHORT_RECEIVE,
           payload: { status: "success" },
         });
+        return true;
       })
       .catch((err) => {
         dispatch(throwNotification({ message: err.message }));
         dispatch({ type: SEARCH_SHORT_ERROR, payload: { status: "error" } });
+        return false;
       });
-  } else
+  } else {
     dispatch(
       throwNotification({
         status: "warning" ,
         message: "NOTIFICATION_SEARCH_SHORT_EMPTY_FIELD",
       })
     );
+  }
+  return false;
 };

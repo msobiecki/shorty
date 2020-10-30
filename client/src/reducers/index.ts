@@ -12,6 +12,6 @@ const reducers = combineReducers({
   searchShort: searchShortReducer,
 });
 
-export type RootState = ReturnType<typeof reducers>;
+export type RootState = ReturnType<typeof reducers> ;
 
 export default reducers;

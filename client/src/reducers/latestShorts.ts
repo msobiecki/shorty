@@ -12,6 +12,7 @@ type LatestShortsActionType = {
 type LatestShortType = {
   address: string;
   slug: string;
+  createdAt: number
 };
 
 const initialState: LatestShortsState = {
@@ -26,7 +27,7 @@ export function latestShortsReducer(
     case ADD_LATEST_SHORT: {
       return {
         ...state,
-        shorts: [...state.shorts, action.payload],
+        shorts: [...state.shorts.slice(-5), action.payload],
       };
     }
     default:

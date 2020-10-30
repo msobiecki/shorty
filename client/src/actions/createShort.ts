@@ -1,6 +1,6 @@
 import moment from "moment";
 
-import { throwNotification } from "./throwNotification";
+import { throwNotification } from "./helpers/throwNotification";
 
 import { ADD_LATEST_SHORT } from "../reducers/latestShorts";
 import {
@@ -12,12 +12,10 @@ import {
 import config from "../config";
 
 type CreateShortProps = { address?: string; slug?: string };
-export const createShort = ({ address, slug }: CreateShortProps) => (
-  dispatch: any
-) => {
+export const createShort = ({ address, slug }: CreateShortProps) => async (dispatch: any) => {
   if (address && slug) {
     dispatch({ type: CREATE_SHORT_REQUEST, payload: { status: "pending" } });
-    fetch(`${config.api}/shorty/`, {
+    return await fetch(`${config.api}/shorty/`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ address, slug }),
@@ -36,16 +34,20 @@ export const createShort = ({ address, slug }: CreateShortProps) => (
           type: CREATE_SHORT_RECEIVE,
           payload: { status: "success" },
         });
+        return true;
       })
       .catch((err) => {
         dispatch(throwNotification({ status: "error", message: err.message }));
         dispatch({ type: CREATE_SHORT_ERROR, payload: { status: "error" } });
+        return false;
       });
-  } else
+  } else {
     dispatch(
       throwNotification({
         status: "warning",
         message: "NOTIFICATION_CREATE_SHORT_EMPTY_FIELD",
       })
     );
+  }
+  return false;
 };
