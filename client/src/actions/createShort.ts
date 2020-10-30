@@ -31,18 +31,20 @@ export const createShort = ({ address, slug }: CreateShortProps) => (
           type: ADD_LATEST_SHORT,
           payload: { createdAt: moment().unix(), address, slug },
         });
+        dispatch(throwNotification({ status: "success", message: "NOTIFICATION_CREATE_SHORT_CREATED"  }));
         dispatch({
           type: CREATE_SHORT_RECEIVE,
           payload: { status: "success" },
         });
       })
       .catch((err) => {
-        dispatch(throwNotification({ message: err.message }));
+        dispatch(throwNotification({ status: "error", message: err.message }));
         dispatch({ type: CREATE_SHORT_ERROR, payload: { status: "error" } });
       });
   } else
     dispatch(
       throwNotification({
+        status: "warning",
         message: "NOTIFICATION_CREATE_SHORT_EMPTY_FIELD",
       })
     );

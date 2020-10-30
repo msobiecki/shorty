@@ -10,6 +10,7 @@ type NotificationActionType = {
 };
 
 type NotificationType = {
+  status: "info" | "success" | "warning" | "error" | "default";
   message: string;
 };
 

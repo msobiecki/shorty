@@ -13,7 +13,7 @@ const Notifications = () => {
   useEffect(
     () => {
       const message = messages.shift();
-      if (message) toast(intl.formatMessage({ id: message.message }));
+      if (message) toast(intl.formatMessage({ id: message.message }), { type: message.status });
     },
     // eslint-disable-next-line
     [messages]
