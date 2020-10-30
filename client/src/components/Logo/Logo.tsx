@@ -1,15 +1,19 @@
 import React from "react";
+import { useIntl } from "react-intl";
 
-import { Wrapper, Title } from "./Logo.styled";
+import { Wrapper, Link, Title } from "./Logo.styled";
 
 type LogoProps = {
   children?: string;
 };
 
 const Logo = ({ children }: LogoProps) => {
+  const intl = useIntl();
   return (
     <Wrapper>
-      <Title>{children}</Title>
+      <Link to="/" title={intl.formatMessage({id: "LOGO_LINK_TITLE"})}>
+        <Title>{children}</Title>
+      </Link>
     </Wrapper>
   );
 };

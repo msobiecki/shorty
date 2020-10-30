@@ -4,6 +4,7 @@ const en = {
   PAGE_COPYRIGHT: "©{date} {company}. All rights reserved",
   HOME_CREATOR_TITLE: "{name} simplifies the url",
   SEARCH_SEARCHER_TITLE: "Search your {name}",
+  LOGO_LINK_TITLE: "Go to homepage",
   NOTIFICATION_CREATE_SHORT_EMPTY_FIELD: "Some fields are empty",
   NOTIFICATION_CREATE_SHORT_REQUEST_ERROR: "Something went wrong",
   NOTIFICATION_SEARCH_SHORT_EMPTY_FIELD: "Some fields are empty",

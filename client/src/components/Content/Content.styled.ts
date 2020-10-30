@@ -6,7 +6,7 @@ export const Wrapper = styled(BoxMUI)`
   display: flex;
   width: 100%;
   min-height: 100%;
-  background-color: #fff;
+  background-color: ${({ theme }) => `${theme.palette.background.default}`};
   padding-top: 60px;
   padding-bottom: 60px;
 `;

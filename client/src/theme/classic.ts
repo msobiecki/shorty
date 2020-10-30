@@ -2,6 +2,13 @@ import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
 
 const classic = responsiveFontSizes(
   createMuiTheme({
+    palette: {
+      type: 'light',
+      background: {
+        default: '#fff',
+        paper: '#eee',
+      }
+    },
     overrides: {
       MuiCssBaseline: {
         "@global": {
