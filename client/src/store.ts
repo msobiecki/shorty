@@ -14,7 +14,7 @@ const persistConfig = {
 }
 
 const middleware =
-  process.env.NODE_ENV === "production"
+  process.env.NODE_ENV === "production" || process.env.NODE_ENV === "test"
     ? compose(applyMiddleware(thunkMiddleware))
     : composeWithDevTools(
         compose(applyMiddleware(thunkMiddleware, createLogger()))

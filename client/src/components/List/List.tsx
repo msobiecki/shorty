@@ -16,16 +16,21 @@ type ListItemProps = {
 const List = ({items} : ListProps) => {
   return (
     <Wrapper>
-      <ListBox>
-        {items.map(({primary, secondary, button, onClick}: ListItemProps, key) => 
-          <ListItem key={key} button={false}>
-            <ListItemText primary={primary} secondary={secondary}/>
-            <ListItemSecondaryAction>
-              <Button onClick={onClick}>{button}</Button>
-            </ListItemSecondaryAction>
-          </ListItem>
-        )}
-      </ListBox>
+      { items.length > 0
+        ?
+          <ListBox>
+            {items.map(({primary, secondary, button, onClick}: ListItemProps, key) => 
+              <ListItem key={key} button={false}>
+                <ListItemText primary={primary} secondary={secondary}/>
+                <ListItemSecondaryAction>
+                  <Button onClick={onClick}>{button}</Button>
+                </ListItemSecondaryAction>
+              </ListItem>
+            )}
+          </ListBox>
+        :
+          null
+      }
     </Wrapper>
   );
 };
