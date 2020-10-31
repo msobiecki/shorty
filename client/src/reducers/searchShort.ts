@@ -7,8 +7,8 @@ type SearchShortState = {
 };
 
 type SearchShortActionType = {
-  type: string;
-  payload: SearchShortType;
+  type?: string;
+  payload?: SearchShortType;
 };
 
 type SearchShortType = {

@@ -7,8 +7,8 @@ type CreateShortState = {
 };
 
 type CreateShortActionType = {
-  type: string;
-  payload: CreateShortType;
+  type?: string;
+  payload?: CreateShortType;
 };
 
 type CreateShortType = {
