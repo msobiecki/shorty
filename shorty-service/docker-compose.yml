@@ -11,8 +11,6 @@ services:
       - postgres
     ports:
       - "3005:3005"
-      - "9230:9229"
-
   postgres:
     image: postgres:latest
     environment:
