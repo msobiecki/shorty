@@ -13,7 +13,7 @@
     "use_env_domain": "DOMAIN",
     "use_env_hostname": "HOSTNAME",
     "use_env_port": "PORT",
-    "use_env_ssl": "SSL",
+    "use_env_ssl": "SSL"
   },
   "staging": {
     "welcome": "[STAGING] SHORTY SERVICE API",
@@ -21,7 +21,7 @@
     "use_env_domain": "DOMAIN",
     "use_env_hostname": "HOSTNAME",
     "use_env_port": "PORT",
-    "use_env_ssl": "SSL",
+    "use_env_ssl": "SSL"
   },
   "production": {
     "welcome": "[PRODUCTION] SHORTY SERVICE API",
@@ -29,6 +29,6 @@
     "use_env_domain": "DOMAIN",
     "use_env_hostname": "HOSTNAME",
     "use_env_port": "PORT",
-    "use_env_ssl": "SSL",
+    "use_env_ssl": "SSL"
   }
 }
