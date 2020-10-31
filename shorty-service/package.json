@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./server/bin/www",
-    "dev": "nodemon ./server/bin/www"
+    "dev": "nodemon ./server/bin/www",
+    "db:migrate:undo:all": "npx sequelize db:migrate:undo:all",
+    "db:migrate": "npx sequelize db:migrate"
   },
   "repository": {
     "type": "git",

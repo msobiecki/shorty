@@ -6,6 +6,7 @@ WORKDIR /home/app
 COPY package.json /home/app/
 COPY package-lock.json /home/app/
 
+RUN npm install -g sequelize-cli
 RUN npm install
 
 COPY . /home/app
