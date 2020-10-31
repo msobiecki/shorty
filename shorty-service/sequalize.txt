@@ -1,6 +1,0 @@
-npx sequelize-cli model:generate --name Report --attributes executor:string,action:string
-npx sequelize-cli model:generate --name Account --attributes email:string,password:string,verification:boolean,activation:boolean,archived:boolean,lang:string,theme:string
-
-npx sequelize-cli seed:generate --name create-report
-npx sequelize-cli seed:generate --name create-account
-
