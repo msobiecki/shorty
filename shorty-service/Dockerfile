@@ -1,5 +1,5 @@
 FROM node:latest
-EXPOSE 3005 9230
+EXPOSE 3005
 
 WORKDIR /home/app
 
