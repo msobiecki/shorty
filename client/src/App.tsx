@@ -7,6 +7,7 @@ import {
   BrowserRouter as RouterProvider,
   Redirect,
   Switch,
+  Route,
 } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import { CssBaseline } from "@material-ui/core";
@@ -50,8 +51,10 @@ const App = () => {
     <AppProvider>
       <CssBaseline />
       <Switch>
-        {routes.map(({ component: Route, ...rest }, i) => (
-          <Route key={i} {...rest} />
+        {routes.map(({ component: Page, ...options }, i) => (
+          <Route key={i} {...options}>
+            <Page />
+          </Route>
         ))}
         <Redirect to={"/"} />
       </Switch>
