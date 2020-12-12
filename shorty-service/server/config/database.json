@@ -3,17 +3,17 @@
     "username": "postgres",
     "password": "postgres",
     "database": "shorty",
-    "host": "localhost",
+    "host": "host.docker.internal",
     "port": 5432,
     "dialect": "postgres"
   },
   "test": {
-    "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "SHORTY_DATABASE_URL"
   },
   "staging": {
-    "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "SHORTY_DATABASE_URL"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL"
+    "use_env_variable": "SHORTY_DATABASE_URL"
   }
 }

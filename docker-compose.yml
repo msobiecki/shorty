@@ -1,0 +1,33 @@
+version: "3.7"
+services:
+  client:
+    build: ./client
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: shorty
+    ports:
+      - "5432:5432"
+    networks:
+      - shorty
+    volumes: 
+      - database-data:/var/lib/postgresql/data
+  shorty-service:
+    build: ./shorty-service
+    ports: 
+      - "8000:8000"
+    networks:
+      - shorty
+    depends_on:
+      - database
+networks: 
+  shorty:
+    driver: bridge
+volumes: 
+  database-data:
+    driver: local

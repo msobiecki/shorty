@@ -9,26 +9,26 @@
   },
   "test": {
     "welcome": "[TEST] SHORTY SERVICE API",
-    "use_env_secret": "SECRET",
-    "use_env_domain": "DOMAIN",
-    "use_env_hostname": "HOSTNAME",
-    "use_env_port": "PORT",
-    "use_env_ssl": "SSL"
+    "use_env_secret": "SHORTY_SECRET",
+    "use_env_domain": "SHORTY_DOMAIN",
+    "use_env_hostname": "SHORTY_HOSTNAME",
+    "use_env_port": "SHORTY_PORT",
+    "use_env_ssl": "SHORTY_SSL"
   },
   "staging": {
     "welcome": "[STAGING] SHORTY SERVICE API",
-    "use_env_secret": "SECRET",
-    "use_env_domain": "DOMAIN",
-    "use_env_hostname": "HOSTNAME",
-    "use_env_port": "PORT",
-    "use_env_ssl": "SSL"
+    "use_env_secret": "SHORTY_SECRET",
+    "use_env_domain": "SHORTY_DOMAIN",
+    "use_env_hostname": "SHORTY_HOSTNAME",
+    "use_env_port": "SHORTY_PORT",
+    "use_env_ssl": "SHORTY_SSL"
   },
   "production": {
     "welcome": "[PRODUCTION] SHORTY SERVICE API",
-    "use_env_secret": "SECRET",
-    "use_env_domain": "DOMAIN",
-    "use_env_hostname": "HOSTNAME",
-    "use_env_port": "PORT",
-    "use_env_ssl": "SSL"
+    "use_env_secret": "SHORTY_SECRET",
+    "use_env_domain": "SHORTY_DOMAIN",
+    "use_env_hostname": "SHORTY_HOSTNAME",
+    "use_env_port": "SHORTY_PORT",
+    "use_env_ssl": "SHORTY_SSL"
   }
 }
