@@ -27,7 +27,7 @@ Shorty, URL shortener
 
   Enviroment | Address
   ------------ | -------------
-  development | http://localhost:8002
+  development | http://localhost:8000
   test | https://test-shorty-api.codeshaker.pl
   staging | https://staging-shorty-api.codeshaker.pl
   production | https://shorty-api.codeshaker.pl
