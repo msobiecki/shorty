@@ -1,7 +1,7 @@
-"use strict";
+'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Short = sequelize.define(
-    "Short",
+    'Short',
     {
       slug: {
         type: DataTypes.STRING,

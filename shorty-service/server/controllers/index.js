@@ -1,6 +1,6 @@
-"use strict";
+'use strict';
 
-const Shorty = require("./shorty");
+const Shorty = require('./shorty');
 
 module.exports = {
   Shorty,
