@@ -1,26 +1,25 @@
-import React from "react";
-import { HelmetProvider } from "react-helmet-async";
-import { Provider as StoreProvider } from "react-redux";
-import { PersistGate } from 'redux-persist/integration/react'
+import { HelmetProvider } from 'react-helmet-async';
+import { Provider as StoreProvider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 
 import {
   BrowserRouter as RouterProvider,
   Redirect,
   Switch,
   Route,
-} from "react-router-dom";
-import { IntlProvider } from "react-intl";
-import { CssBaseline } from "@material-ui/core";
-import { StylesProvider, MuiThemeProvider } from "@material-ui/core/styles";
-import { ThemeProvider } from "styled-components";
+} from 'react-router-dom';
+import { IntlProvider } from 'react-intl';
+import { CssBaseline } from '@material-ui/core';
+import { StylesProvider, MuiThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from 'styled-components';
 
-import config from "./config";
-import routes from "./routes";
-import lang from "./lang";
-import theme from "./theme";
-import { store, persistor } from "./store";
+import config from './config';
+import routes from './routes';
+import lang from './lang';
+import theme from './theme';
+import { store, persistor } from './store';
 
-import { Notifications } from "./components";
+import { Notifications } from './components';
 
 type AppProviderProps = {
   children: JSX.Element | JSX.Element[];
@@ -56,7 +55,7 @@ const App = () => {
             <Page />
           </Route>
         ))}
-        <Redirect to={"/"} />
+        <Redirect to={'/'} />
       </Switch>
       <Notifications />
     </AppProvider>

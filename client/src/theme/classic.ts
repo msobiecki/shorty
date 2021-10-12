@@ -1,25 +1,25 @@
-import { createMuiTheme, responsiveFontSizes } from "@material-ui/core/styles";
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 const classic = responsiveFontSizes(
-  createMuiTheme({
+  createTheme({
     palette: {
       type: 'light',
       background: {
         default: '#fff',
         paper: '#eee',
-      }
+      },
     },
     overrides: {
       MuiCssBaseline: {
-        "@global": {
+        '@global': {
           html: {
-            height: "100%",
+            height: '100%',
           },
           body: {
-            height: "100%",
+            height: '100%',
           },
-          "#root": {
-            height: "100%",
+          '#root': {
+            height: '100%',
           },
         },
       },

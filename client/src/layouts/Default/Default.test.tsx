@@ -1,44 +1,44 @@
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 
-import React from "react";
-import renderApp from "../../helpers/tests/AppProvider";
+import React from 'react';
+import renderApp from '../../helpers/tests/AppProvider';
 
-import Default from "./Default";
+import Default from './Default';
 
-describe("Default Layout", () => {
-  test("render init snapshot", () => {
-    const { container } = renderApp(<Default title={"TEST_TITLE"}></Default>);
+describe('Default Layout', () => {
+  test('render init snapshot', () => {
+    const { container } = renderApp(<Default title={'TEST_TITLE'}></Default>);
 
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="MuiBox-root MuiBox-root-1 sc-bdnylx eQJtgV"
+          class="MuiBox-root MuiBox-root-1 sc-bdfBQB iKYVx"
         >
           <div
-            class="MuiBox-root MuiBox-root-2 sc-gtssRu jFIKhe"
+            class="MuiBox-root MuiBox-root-2 sc-gsTEea FtNyv"
           >
             <a
-              class="sc-dlnjPT fsQckY"
+              class="sc-dlfnuX cgfRhd"
               href="/"
               title="Go to homepage"
             >
               <p
-                class="MuiTypography-root sc-hKFyIo MuiTypography-body1"
+                class="MuiTypography-root sc-hKgJUU MuiTypography-body1"
               >
-                Shorty
+                SHORTY
               </p>
             </a>
           </div>
            | 
           TEST_TITLE
           <div
-            class="sc-jJMGHv eHRLxW"
+            class="sc-jJEKmz kIiKjn"
           />
           <div
-            class="MuiBox-root MuiBox-root-3 sc-eCApGN hGfBrw"
+            class="MuiBox-root MuiBox-root-3 sc-eCstlR fjvN"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSFkmK"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSgvzq"
               tabindex="0"
               type="button"
             >
@@ -52,7 +52,7 @@ describe("Default Layout", () => {
               />
             </button>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSFkmK"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSgvzq"
               tabindex="0"
               type="button"
             >
@@ -68,15 +68,15 @@ describe("Default Layout", () => {
           </div>
         </div>
         <div
-          class="MuiBox-root MuiBox-root-4 sc-gKAblj kIwFtN"
+          class="MuiBox-root MuiBox-root-4 sc-gKseQn jkGFUx"
         />
         <div
-          class="MuiBox-root MuiBox-root-5 sc-kLokih gFFbVE"
+          class="MuiBox-root MuiBox-root-5 sc-kLgnNl bHCKme"
         >
           <p
-            class="MuiTypography-root sc-iklIKw dDUKFn MuiTypography-body1"
+            class="MuiTypography-root sc-iktFfs lnLkTd MuiTypography-body1"
           >
-            ©2020 Shorty. All rights reserved
+            ©2021 CODESHAKER. All rights reserved
           </p>
         </div>
       </div>

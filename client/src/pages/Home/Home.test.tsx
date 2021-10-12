@@ -1,44 +1,44 @@
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 
-import React from "react";
-import renderApp from "../../helpers/tests/AppProvider";
+import React from 'react';
+import renderApp from '../../helpers/tests/AppProvider';
 
-import Home from "./Home";
+import Home from './Home';
 
-describe("Home Page", () => {
-  test("render init snapshot", () => {
+describe('Home Page', () => {
+  test('render init snapshot', () => {
     const { container } = renderApp(<Home></Home>);
 
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="MuiBox-root MuiBox-root-1 sc-bdnylx eQJtgV"
+          class="MuiBox-root MuiBox-root-1 sc-bdfBQB iKYVx"
         >
           <div
-            class="MuiBox-root MuiBox-root-2 sc-gtssRu jFIKhe"
+            class="MuiBox-root MuiBox-root-2 sc-gsTEea FtNyv"
           >
             <a
-              class="sc-dlnjPT fsQckY"
+              class="sc-dlfnuX cgfRhd"
               href="/"
               title="Go to homepage"
             >
               <p
-                class="MuiTypography-root sc-hKFyIo MuiTypography-body1"
+                class="MuiTypography-root sc-hKgJUU MuiTypography-body1"
               >
-                Shorty
+                SHORTY
               </p>
             </a>
           </div>
            | 
           Home
           <div
-            class="sc-jJMGHv eHRLxW"
+            class="sc-jJEKmz kIiKjn"
           />
           <div
-            class="MuiBox-root MuiBox-root-3 sc-eCApGN hGfBrw"
+            class="MuiBox-root MuiBox-root-3 sc-eCstlR fjvN"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSFkmK"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSgvzq"
               tabindex="0"
               type="button"
             >
@@ -52,7 +52,7 @@ describe("Home Page", () => {
               />
             </button>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSFkmK"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSgvzq"
               tabindex="0"
               type="button"
             >
@@ -68,40 +68,40 @@ describe("Home Page", () => {
           </div>
         </div>
         <div
-          class="MuiBox-root MuiBox-root-4 sc-gKAblj kIwFtN"
+          class="MuiBox-root MuiBox-root-4 sc-gKseQn jkGFUx"
         >
           <div
-            class="MuiBox-root MuiBox-root-5 sc-iCoHVE kBwVLg"
+            class="MuiBox-root MuiBox-root-5 sc-iBPTik guJOWj"
           >
             <form
-              class="sc-fujyUd"
+              class="sc-fubCzh"
             >
               <div
-                class="MuiContainer-root sc-pNWxx fxlCnW MuiContainer-maxWidthLg"
+                class="MuiContainer-root sc-pGacB jsAUto MuiContainer-maxWidthLg"
               >
                 <h1
-                  class="MuiTypography-root sc-crzoUp dXENsl MuiTypography-h1"
+                  class="MuiTypography-root sc-crrszt eiAqem MuiTypography-h1"
                 >
-                  Shorty simplifies the url
+                  SHORTY simplifies the url
                 </h1>
                 <div
-                  class="MuiGrid-root sc-dIsAE MuiGrid-container MuiGrid-spacing-xs-2"
+                  class="MuiGrid-root sc-dQoVA MuiGrid-container MuiGrid-spacing-xs-2"
                 >
                   <div
-                    class="MuiGrid-root sc-dIsAE MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6"
+                    class="MuiGrid-root sc-dQoVA MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6"
                   >
                     <div
-                      class="MuiFormControl-root sc-jrsJCI MuiFormControl-fullWidth"
+                      class="MuiFormControl-root sc-jrAFXE MuiFormControl-fullWidth"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root sc-kEqYlL MuiInputLabel-formControl MuiInputLabel-animated"
+                        class="MuiFormLabel-root MuiInputLabel-root sc-kEjbQP MuiInputLabel-formControl MuiInputLabel-animated"
                         data-shrink="false"
                         for="create-address"
                       >
                         Address
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline sc-iqAbSa MuiInputBase-formControl MuiInput-formControl"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline sc-iqHYmW MuiInputBase-formControl MuiInput-formControl"
                       >
                         <input
                           aria-invalid="false"
@@ -115,20 +115,20 @@ describe("Home Page", () => {
                     </div>
                   </div>
                   <div
-                    class="MuiGrid-root sc-dIsAE MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6"
+                    class="MuiGrid-root sc-dQoVA MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-12 MuiGrid-grid-md-6"
                   >
                     <div
-                      class="MuiFormControl-root sc-jrsJCI MuiFormControl-fullWidth"
+                      class="MuiFormControl-root sc-jrAFXE MuiFormControl-fullWidth"
                     >
                       <label
-                        class="MuiFormLabel-root MuiInputLabel-root sc-kEqYlL MuiInputLabel-formControl MuiInputLabel-animated"
+                        class="MuiFormLabel-root MuiInputLabel-root sc-kEjbQP MuiInputLabel-formControl MuiInputLabel-animated"
                         data-shrink="false"
                         for="create-slug"
                       >
                         Slug
                       </label>
                       <div
-                        class="MuiInputBase-root MuiInput-root MuiInput-underline sc-iqAbSa MuiInputBase-formControl MuiInput-formControl"
+                        class="MuiInputBase-root MuiInput-root MuiInput-underline sc-iqHYmW MuiInputBase-formControl MuiInput-formControl"
                       >
                         <input
                           aria-invalid="false"
@@ -143,10 +143,10 @@ describe("Home Page", () => {
                   </div>
                 </div>
                 <div
-                  class="MuiBox-root MuiBox-root-6 sc-bqGHjH iWjhzo"
+                  class="MuiBox-root MuiBox-root-6 sc-bqyKOL eUIWxc"
                 >
                   <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-text sc-ksluoS"
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text sc-kstqJO"
                     tabindex="0"
                     type="submit"
                   >
@@ -165,12 +165,12 @@ describe("Home Page", () => {
           </div>
         </div>
         <div
-          class="MuiBox-root MuiBox-root-7 sc-kLokih gFFbVE"
+          class="MuiBox-root MuiBox-root-7 sc-kLgnNl bHCKme"
         >
           <p
-            class="MuiTypography-root sc-iklIKw dDUKFn MuiTypography-body1"
+            class="MuiTypography-root sc-iktFfs lnLkTd MuiTypography-body1"
           >
-            ©2020 Shorty. All rights reserved
+            ©2021 CODESHAKER. All rights reserved
           </p>
         </div>
       </div>

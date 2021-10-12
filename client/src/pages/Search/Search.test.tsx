@@ -1,44 +1,44 @@
-import "@testing-library/jest-dom";
+import '@testing-library/jest-dom';
 
-import React from "react";
-import renderApp from "../../helpers/tests/AppProvider";
+import React from 'react';
+import renderApp from '../../helpers/tests/AppProvider';
 
-import Search from "./Search";
+import Search from './Search';
 
-describe("Search Page", () => {
-  test("render init snapshot", () => {
+describe('Search Page', () => {
+  test('render init snapshot', () => {
     const { container } = renderApp(<Search></Search>);
 
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="MuiBox-root MuiBox-root-1 sc-bdnylx eQJtgV"
+          class="MuiBox-root MuiBox-root-1 sc-bdfBQB iKYVx"
         >
           <div
-            class="MuiBox-root MuiBox-root-2 sc-gtssRu jFIKhe"
+            class="MuiBox-root MuiBox-root-2 sc-gsTEea FtNyv"
           >
             <a
-              class="sc-dlnjPT fsQckY"
+              class="sc-dlfnuX cgfRhd"
               href="/"
               title="Go to homepage"
             >
               <p
-                class="MuiTypography-root sc-hKFyIo MuiTypography-body1"
+                class="MuiTypography-root sc-hKgJUU MuiTypography-body1"
               >
-                Shorty
+                SHORTY
               </p>
             </a>
           </div>
            | 
           Search
           <div
-            class="sc-jJMGHv eHRLxW"
+            class="sc-jJEKmz kIiKjn"
           />
           <div
-            class="MuiBox-root MuiBox-root-3 sc-eCApGN hGfBrw"
+            class="MuiBox-root MuiBox-root-3 sc-eCstlR fjvN"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSFkmK"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSgvzq"
               tabindex="0"
               type="button"
             >
@@ -52,7 +52,7 @@ describe("Search Page", () => {
               />
             </button>
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSFkmK"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text sc-jSgvzq"
               tabindex="0"
               type="button"
             >
@@ -68,7 +68,7 @@ describe("Search Page", () => {
           </div>
         </div>
         <div
-          class="MuiBox-root MuiBox-root-4 sc-gKAblj kIwFtN"
+          class="MuiBox-root MuiBox-root-4 sc-gKseQn jkGFUx"
         >
           <div
             class="MuiGrid-root MuiGrid-container"
@@ -77,37 +77,37 @@ describe("Search Page", () => {
               class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
             >
               <div
-                class="MuiBox-root MuiBox-root-5 sc-fnVYJo iDGIRQ"
+                class="MuiBox-root MuiBox-root-5 sc-fodVek fhIcCH"
               >
                 <form
-                  class="sc-fFSRdu"
+                  class="sc-fFucqa"
                 >
                   <div
-                    class="MuiContainer-root sc-bkbjAj kFMbfJ MuiContainer-maxWidthLg"
+                    class="MuiContainer-root sc-bkzYnD gefftr MuiContainer-maxWidthLg"
                   >
                     <h1
-                      class="MuiTypography-root sc-dlMBXb hECZTl MuiTypography-h1"
+                      class="MuiTypography-root sc-dmlqKv fItXYt MuiTypography-h1"
                     >
                       Search your shorty
                     </h1>
                     <div
-                      class="MuiGrid-root sc-kfYqjs MuiGrid-container MuiGrid-spacing-xs-2"
+                      class="MuiGrid-root sc-kfzBvY MuiGrid-container MuiGrid-spacing-xs-2"
                     >
                       <div
-                        class="MuiGrid-root sc-kfYqjs MuiGrid-item MuiGrid-grid-xs-12"
+                        class="MuiGrid-root sc-kfzBvY MuiGrid-item MuiGrid-grid-xs-12"
                       >
                         <div
-                          class="MuiFormControl-root sc-iemXMA MuiFormControl-fullWidth"
+                          class="MuiFormControl-root sc-idOiZg MuiFormControl-fullWidth"
                         >
                           <label
-                            class="MuiFormLabel-root MuiInputLabel-root sc-dIvqjp MuiInputLabel-formControl MuiInputLabel-animated"
+                            class="MuiFormLabel-root MuiInputLabel-root sc-dIUeWJ MuiInputLabel-formControl MuiInputLabel-animated"
                             data-shrink="false"
                             for="search-slug"
                           >
                             Slug
                           </label>
                           <div
-                            class="MuiInputBase-root MuiInput-root MuiInput-underline sc-hHEjAm MuiInputBase-formControl MuiInput-formControl"
+                            class="MuiInputBase-root MuiInput-root MuiInput-underline sc-hHfuMS MuiInputBase-formControl MuiInput-formControl"
                           >
                             <input
                               aria-invalid="false"
@@ -122,10 +122,10 @@ describe("Search Page", () => {
                       </div>
                     </div>
                     <div
-                      class="MuiBox-root MuiBox-root-6 sc-fKgIGh jumiqG"
+                      class="MuiBox-root MuiBox-root-6 sc-fKFxtB gUzoqj"
                     >
                       <button
-                        class="MuiButtonBase-root MuiButton-root MuiButton-text sc-bCwgka"
+                        class="MuiButtonBase-root MuiButton-root MuiButton-text sc-bBXrwG"
                         tabindex="0"
                         type="submit"
                       >
@@ -147,18 +147,18 @@ describe("Search Page", () => {
               class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
             >
               <div
-                class="MuiBox-root MuiBox-root-7 sc-cxNIbT frhZof"
+                class="MuiBox-root MuiBox-root-7 sc-cxFLGX kbsBaz"
               />
             </div>
           </div>
         </div>
         <div
-          class="MuiBox-root MuiBox-root-8 sc-kLokih gFFbVE"
+          class="MuiBox-root MuiBox-root-8 sc-kLgnNl bHCKme"
         >
           <p
-            class="MuiTypography-root sc-iklIKw dDUKFn MuiTypography-body1"
+            class="MuiTypography-root sc-iktFfs lnLkTd MuiTypography-body1"
           >
-            ©2020 Shorty. All rights reserved
+            ©2021 CODESHAKER. All rights reserved
           </p>
         </div>
       </div>
