@@ -37,11 +37,13 @@ jobs:
       # Run install and bootstrap steps 
       - run: npm ci
       # Run test client step
-      - run: npm test
+      - name: Test client
+        run: npm test
         working-directory: client
         env:
           SKIP_PREFLIGHT_CHECK: true
       # Run test client step
-      - run: npm test
+      - name: Test shorty service
+        run: npm test
         working-directory: shorty-service
 
