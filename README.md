@@ -8,31 +8,34 @@ Shorty, URL shortener
 ### Frontend
 - client - main react application builded by create-react-app
 
-  Enviroment | Address
+  Environment | Address
   ------------ | -------------
   development | http://localhost:3000
-  test | https://test-shorty.codeshaker.pl
-  staging | https://staging-shorty.codeshaker.pl
-  production | https://shorty.codeshaker.pl
+  test | 
+  beta | 
+  production | 
 
-  Enviroment params | Type
+  Environment params | Type
   ------------ | -------------
   REACT_APP_PROJECT_NAME | string
+  REACT_APP_STAGE | string
+  REACT_APP_LANGUAGE | string
+  REACT_APP_THEME | string
+  REACT_APP_API | url
   REACT_APP_COPYRIGHT_COMPANY | string
   REACT_APP_COPYRIGHT_DATE | string
-  REACT_APP_API | url
 
 ### Backend
-- short-service - microservice build by express
+- shorty-service - microservice build by express
 
-  Enviroment | Address
+  Environment | Address
   ------------ | -------------
   development | http://localhost:8000
-  test | https://test-shorty-api.codeshaker.pl
-  staging | https://staging-shorty-api.codeshaker.pl
-  production | https://shorty-api.codeshaker.pl
+  test | 
+  beta | 
+  production | 
 
-  Enviroment params | Type
+  Environment params | Type
   ------------ | -------------
   SHORTY_SECRET | string
   SHORTY_DOMAIN | string
@@ -42,6 +45,30 @@ Shorty, URL shortener
   SHORTY_DATABASE_URL | database url
 
 ###  Docker
+
+- Compose params
+
+  Environment params | Type
+  ------------ | -------------
+  NODE_ENV | string
+  STAGE | string
+  CLIENT_PORT | number
+  REACT_APP_PROJECT_NAME | string
+  REACT_APP_LANGUAGE | string
+  REACT_APP_THEME | string
+  REACT_APP_API | url
+  REACT_APP_COPYRIGHT_COMPANY | string
+  REACT_APP_COPYRIGHT_DATE | string
+  POSTGRES_PORT | number
+  POSTGRES_USER | string
+  POSTGRES_PASSWORD | string
+  SHORTY_SECRET | string
+  SHORTY_DOMAIN | string
+  SHORTY_HOSTNAME | url/ip
+  SHORTY_PORT | number
+  SHORTY_SSL | boolean
+  SHORTY_DATABASE_URL | database url
+
 - Project image 
   - create: ```docker-compose -f 'docker-compose.yml' up```
 - Shorty-service database

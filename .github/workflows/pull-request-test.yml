@@ -42,6 +42,14 @@ jobs:
         working-directory: client
         env:
           SKIP_PREFLIGHT_CHECK: true
+          REACT_APP_PROJECT_NAME: Shorty DEV
+          REACT_APP_STAGE: dev
+          REACT_APP_LANGUAGE: en
+          REACT_APP_THEME: classic
+          REACT_APP_API: http://localhost:8000/api
+          REACT_APP_COPYRIGHT_COMPANY: SHORTY
+          REACT_APP_COPYRIGHT_DATE: 2021
+
       # Run test client step
       - name: Test shorty service
         run: npm test

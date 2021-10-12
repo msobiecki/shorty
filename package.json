@@ -2,17 +2,46 @@
   "name": "shorty",
   "version": "0.1.0",
   "private": true,
-  "license": "UNLICENSED",
+  "description": "Shorty, URL shortener",
+  "keywords": [
+    "shorty",
+    "url shortener"
+  ],
+  "homepage": "https://msobiecki.github.io/shorty/",
+  "bugs": {
+    "url": "https://github.com/msobiecki/shorty/issues"
+  },
+  "repository": {
+    "url": "git://git@github.com:msobiecki/shorty.git"
+  },
+  "license": "MIT",
+  "author": "Michał Sobiecki <kontakt@codeshaker.pl>",
   "scripts": {
     "install": "npm-run-all --parallel install:*",
     "install:client": "cd client && npm install",
-    "install:shorty": "cd shorty-service && npm install",
+    "install:shorty-service": "cd shorty-service && npm install",
     "start": "npm-run-all --parallel start:*",
     "start:client": "cd client && npm run start",
-    "start:shorty": "cd shorty-service && npm run start",
+    "start:shorty-service": "cd shorty-service && npm run start",
     "dev": "npm-run-all --parallel dev:*",
     "dev:client": "cd client && npm run start",
-    "dev:shorty": "cd shorty-service && npm run dev"
+    "dev:shorty-service": "cd shorty-service && npm run dev",
+    "docker:development:build": "docker-compose --env-file ./docker-variables.env build",
+    "docker:development:pull": "docker-compose --env-file ./docker-variables.env pull",
+    "docker:development:up": "docker-compose --env-file ./docker-variables.env up -d",
+    "docker:development:down": "docker-compose --env-file ./docker-variables.env down",
+    "docker:beta:build": "docker-compose --env-file ./docker-variables.beta.env -f docker-compose.yml -f docker-compose.beta.yml build",
+    "docker:beta:pull": "docker-compose --env-file ./docker-variables.beta.env -f docker-compose.yml -f docker-compose.beta.yml pull",
+    "docker:beta:up": "docker-compose --env-file ./docker-variables.beta.env -f docker-compose.yml -f docker-compose.beta.yml up -d",
+    "docker:beta:down": "docker-compose --env-file ./docker-variables.beta.env -f docker-compose.yml -f docker-compose.beta.yml down",
+    "docker:test:build": "docker-compose --env-file ./docker-variables.test.env -f docker-compose.yml -f docker-compose.test.yml build",
+    "docker:test:pull": "docker-compose --env-file ./docker-variables.test.env -f docker-compose.yml -f docker-compose.test.yml pull",
+    "docker:test:up": "docker-compose --env-file ./docker-variables.test.env -f docker-compose.yml -f docker-compose.test.yml up -d",
+    "docker:test:down": "docker-compose --env-file ./docker-variables.test.env -f docker-compose.yml -f docker-compose.test.yml down",
+    "docker:production:build": "docker-compose --env-file ./docker-variables.production.env -f docker-compose.yml -f docker-compose.production.yml build",
+    "docker:production:pull": "docker-compose --env-file ./docker-variables.production.env -f docker-compose.yml -f docker-compose.production.yml pull",
+    "docker:production:up": "docker-compose --env-file ./docker-variables.production.env -f docker-compose.yml -f docker-compose.production.yml up -d",
+    "docker:production:down": "docker-compose --env-file ./docker-variables.production.env -f docker-compose.yml -f docker-compose.production.yml down"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",

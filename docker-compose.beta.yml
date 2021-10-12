@@ -15,34 +15,34 @@ services:
         - REACT_APP_COPYRIGHT_DATE=${REACT_APP_COPYRIGHT_DATE}
     stdin_open: true
     env_file:
-      - docker-variables.env
+      - docker-variables.beta.env
     ports:
       - "${CLIENT_PORT}:3000"
     networks:
-      - shorty-dev
+      - shorty-beta
   database:
     image: postgres
     env_file:
-      - docker-variables.env
+      - docker-variables.beta.env
     ports:
       - "${POSTGRES_PORT}:5432"
     networks:
-      - shorty-dev
+      - shorty-beta
     volumes: 
-      - shorty-dev:/var/lib/postgresql/data
+      - shorty-beta:/var/lib/postgresql/data
   shorty-service:
     build: ./shorty-service
     env_file:
-      - docker-variables.env
+      - docker-variables.beta.env
     ports: 
-      - "${SHORTY_PORT}:8000"
+      - "${SHORTY_PORT}:${SHORTY_PORT}"
     networks:
-      - shorty-dev
+      - shorty-beta
     depends_on:
       - database
 networks: 
-  shorty-dev:
+  shorty-beta:
     driver: bridge
 volumes: 
-  shorty-dev:
+  shorty-beta:
     driver: local

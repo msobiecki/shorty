@@ -10,7 +10,7 @@
   "test": {
     "use_env_variable": "SHORTY_DATABASE_URL"
   },
-  "staging": {
+  "beta": {
     "use_env_variable": "SHORTY_DATABASE_URL"
   },
   "production": {

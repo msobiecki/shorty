@@ -15,8 +15,8 @@
     "use_env_port": "SHORTY_PORT",
     "use_env_ssl": "SHORTY_SSL"
   },
-  "staging": {
-    "welcome": "[STAGING] SHORTY SERVICE API",
+  "beta": {
+    "welcome": "[beta] SHORTY SERVICE API",
     "use_env_secret": "SHORTY_SECRET",
     "use_env_domain": "SHORTY_DOMAIN",
     "use_env_hostname": "SHORTY_HOSTNAME",

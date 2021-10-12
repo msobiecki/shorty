@@ -76,7 +76,7 @@ describe('Default Layout', () => {
           <p
             class="MuiTypography-root sc-iktFfs lnLkTd MuiTypography-body1"
           >
-            ©2021 CODESHAKER. All rights reserved
+            ©2021 SHORTY. All rights reserved
           </p>
         </div>
       </div>
