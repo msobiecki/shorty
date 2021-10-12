@@ -25,7 +25,7 @@ describe('Home Page', () => {
               <p
                 class="MuiTypography-root sc-hKgJUU MuiTypography-body1"
               >
-                SHORTY
+                TEST Shorty
               </p>
             </a>
           </div>
@@ -82,7 +82,7 @@ describe('Home Page', () => {
                 <h1
                   class="MuiTypography-root sc-crrszt eiAqem MuiTypography-h1"
                 >
-                  SHORTY simplifies the url
+                  TEST Shorty simplifies the url
                 </h1>
                 <div
                   class="MuiGrid-root sc-dQoVA MuiGrid-container MuiGrid-spacing-xs-2"

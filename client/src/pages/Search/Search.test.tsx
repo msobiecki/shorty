@@ -25,7 +25,7 @@ describe('Search Page', () => {
               <p
                 class="MuiTypography-root sc-hKgJUU MuiTypography-body1"
               >
-                SHORTY
+                TEST Shorty
               </p>
             </a>
           </div>
@@ -88,7 +88,7 @@ describe('Search Page', () => {
                     <h1
                       class="MuiTypography-root sc-dmlqKv fItXYt MuiTypography-h1"
                     >
-                      Search your shorty
+                      Search your test shorty
                     </h1>
                     <div
                       class="MuiGrid-root sc-kfzBvY MuiGrid-container MuiGrid-spacing-xs-2"

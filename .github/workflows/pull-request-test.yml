@@ -42,7 +42,7 @@ jobs:
         working-directory: client
         env:
           SKIP_PREFLIGHT_CHECK: true
-          REACT_APP_PROJECT_NAME: Shorty DEV
+          REACT_APP_PROJECT_NAME: TEST Shorty
           REACT_APP_STAGE: dev
           REACT_APP_LANGUAGE: en
           REACT_APP_THEME: classic

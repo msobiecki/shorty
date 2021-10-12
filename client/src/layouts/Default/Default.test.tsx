@@ -25,7 +25,7 @@ describe('Default Layout', () => {
               <p
                 class="MuiTypography-root sc-hKgJUU MuiTypography-body1"
               >
-                SHORTY
+                TEST Shorty
               </p>
             </a>
           </div>
