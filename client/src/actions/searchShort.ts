@@ -19,12 +19,10 @@ export const searchShort =
         redirect: 'manual',
       })
         .then((response) => {
-          console.log(response.redirected, response.status);
           if (response.status === 0) window.location.replace(response.url);
           else if (response.status === 404)
             throw new Error('NOTIFICATION_SEARCH_SHORT_NOT_FOUND');
           else if (response.redirected) {
-            console.log('redirect?');
             window.location.href = response.url;
           } else if (response.ok) {
             return response.json();
