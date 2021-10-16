@@ -14,7 +14,7 @@ describe('Logo', () => {
           class="MuiBox-root MuiBox-root-1 sc-bdfBQB gcmvDb"
         >
           <a
-            class="sc-gsTEea heunjV"
+            class="sc-gsTEea hSALJC"
             href="/"
             title="Go to homepage"
           >

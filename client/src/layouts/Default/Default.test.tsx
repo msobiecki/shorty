@@ -15,7 +15,7 @@ describe('Default Layout', () => {
             class="MuiBox-root MuiBox-root-2 sc-gsTEea FtNyv"
           >
             <a
-              class="sc-dlfnuX cgfRhd"
+              class="sc-dlfnuX cfkoEm"
               href="/"
               title="Go to homepage"
             >
@@ -29,7 +29,7 @@ describe('Default Layout', () => {
            | 
           TEST_TITLE
           <div
-            class="sc-jJEKmz kIiKjn"
+            class="sc-jJEKmz fjhaCX"
           />
           <div
             class="MuiBox-root MuiBox-root-3 sc-eCstlR fjvN"
