@@ -1,19 +1,19 @@
-import React from "react";
-import { useIntl } from "react-intl";
-import { useSelector, useDispatch } from "react-redux";
+import { ReactElement } from 'react';
+import { useIntl } from 'react-intl';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { Creator } from "../../components";
+import { Creator } from '../../components';
 
-import config from "../../config";
+import config from '../../config';
 
-import { createShort } from "../../actions";
+import { createShort } from '../../actions';
 
-import { RootState } from "../../reducers";
+import { RootState } from '../../reducers';
 
-import { Default as DefaultLayout } from "../../layouts";
-import { useHistory } from "react-router-dom";
+import { Default as DefaultLayout } from '../../layouts';
+import { useHistory } from 'react-router-dom';
 
-const Home = () => {
+const Home = (): ReactElement => {
   const intl = useIntl();
   const history = useHistory();
 
@@ -21,17 +21,17 @@ const Home = () => {
   const dispatch = useDispatch();
 
   return (
-    <DefaultLayout title={intl.formatMessage({id: 'PAGE_TITLE_HOME'})}>
+    <DefaultLayout title={intl.formatMessage({ id: 'PAGE_TITLE_HOME' })}>
       <Creator
-        loading={status === "pending" ? true : false}
+        loading={status === 'pending' ? true : false}
         title={intl.formatMessage(
-          { id: "HOME_CREATOR_TITLE" },
+          { id: 'HOME_CREATOR_TITLE' },
           { name: config.name }
         )}
         onSubmit={async ({ address, slug }) => {
-            if(await dispatch(createShort({ address, slug }))) history.push('/search');
-          } 
-        }
+          if (await dispatch(createShort({ address, slug })))
+            history.push('/search');
+        }}
       />
     </DefaultLayout>
   );

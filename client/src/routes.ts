@@ -1,20 +1,21 @@
-import { Home, Search } from "./pages";
+import { ReactElement } from 'react';
+import { Home, Search } from './pages';
 
 type RouteType = {
   path: string;
   exact?: boolean;
-  component: () => JSX.Element;
+  component: () => ReactElement;
   routes?: Array<RouteType>;
 };
 
 const routes: Array<RouteType> = [
   {
-    path: "/search",
+    path: '/search',
     exact: true,
     component: Search,
   },
   {
-    path: "/",
+    path: '/',
     exact: true,
     component: Home,
   },

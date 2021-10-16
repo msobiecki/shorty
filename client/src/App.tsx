@@ -1,3 +1,4 @@
+import { ReactElement } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Provider as StoreProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
@@ -22,7 +23,7 @@ import { store, persistor } from './store';
 import { Notifications } from './components';
 
 type AppProviderProps = {
-  children: JSX.Element | JSX.Element[];
+  children: ReactElement | ReactElement[];
 };
 
 const AppProvider = ({ children }: AppProviderProps) => {
@@ -45,7 +46,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
   );
 };
 
-const App = () => {
+const App = (): ReactElement => {
   return (
     <AppProvider>
       <CssBaseline />

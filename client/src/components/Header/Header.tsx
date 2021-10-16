@@ -1,12 +1,12 @@
-import React from "react";
+import { ReactElement } from 'react';
 
-import { Wrapper } from "./Header.styled";
+import { Wrapper } from './Header.styled';
 
 type HeaderProps = {
-  children?: JSX.Element | JSX.Element[] | string;
+  children?: ReactElement | ReactElement[] | string;
 };
 
-const Header = ({ children }: HeaderProps) => {
+const Header = ({ children }: HeaderProps): ReactElement => {
   return <Wrapper>{children}</Wrapper>;
 };
 

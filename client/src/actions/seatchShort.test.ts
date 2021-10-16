@@ -31,6 +31,7 @@ describe('Search Short Action', () => {
     ];
     const store = mockStore({ shorts: [] });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return store.dispatch<any>(searchShort({ slug: 'TEST_SLUG' })).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
@@ -48,6 +49,7 @@ describe('Search Short Action', () => {
     ];
     const store = mockStore({ shorts: [] });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return store.dispatch<any>(searchShort({})).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
@@ -73,6 +75,7 @@ describe('Search Short Action', () => {
     ];
     const store = mockStore({ shorts: [] });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return store.dispatch<any>(searchShort({ slug: 'TEST_SLUG' })).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
@@ -98,6 +101,7 @@ describe('Search Short Action', () => {
     ];
     const store = mockStore({ shorts: [] });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return store.dispatch<any>(searchShort({ slug: 'TEST_SLUG' })).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });

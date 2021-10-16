@@ -3,48 +3,48 @@ import {
   SEARCH_SHORT_RECEIVE,
   SEARCH_SHORT_ERROR,
   searchShortReducer as reducer,
-} from "./searchShort";
+} from './searchShort';
 
-describe("latest shorts reducer", () => {
-  it("should return the initial state", () => {
+describe('latest shorts reducer', () => {
+  it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual({
-      status: "idle",
+      status: 'idle',
     });
   });
 
-  it("should handle SEARCH_SHORT_REQUEST", () => {
+  it('should handle SEARCH_SHORT_REQUEST', () => {
     expect(
       reducer(
-        { status: "idle" },
+        { status: 'idle' },
         {
           type: SEARCH_SHORT_REQUEST,
-          payload: { status: "pending" },
+          payload: { status: 'pending' },
         }
       )
-    ).toEqual({ status: "pending" });
+    ).toEqual({ status: 'pending' });
   });
 
-  it("should handle SEARCH_SHORT_RECEIVE", () => {
+  it('should handle SEARCH_SHORT_RECEIVE', () => {
     expect(
       reducer(
-        { status: "idle" },
+        { status: 'idle' },
         {
           type: SEARCH_SHORT_RECEIVE,
-          payload: { status: "success" },
+          payload: { status: 'success' },
         }
       )
-    ).toEqual({ status: "success" });
+    ).toEqual({ status: 'success' });
   });
 
-  it("should handle SEARCH_SHORT_ERROR", () => {
+  it('should handle SEARCH_SHORT_ERROR', () => {
     expect(
       reducer(
-        { status: "idle" },
+        { status: 'idle' },
         {
           type: SEARCH_SHORT_ERROR,
-          payload: { status: "error" },
+          payload: { status: 'error' },
         }
       )
-    ).toEqual({ status: "error" });
+    ).toEqual({ status: 'error' });
   });
 });

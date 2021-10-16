@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Box as BoxMUI, Typography as TypographyMUI } from "@material-ui/core";
+import { Box as BoxMUI, Typography as TypographyMUI } from '@material-ui/core';
 
 export const Wrapper = styled(BoxMUI)`
   position: fixed;

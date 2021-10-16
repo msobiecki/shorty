@@ -1,12 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Box as BoxMUI, 
-  List as ListBoxMUI, 
-  ListItem as ListItemMUI, 
-  ListItemText as ListItemTextMUI, 
-  ListItemSecondaryAction as ListItemSecondaryActionMUI, 
-  Button as ButtonMUI, 
-} from "@material-ui/core";
+import {
+  Box as BoxMUI,
+  List as ListBoxMUI,
+  ListItem as ListItemMUI,
+  ListItemText as ListItemTextMUI,
+  ListItemSecondaryAction as ListItemSecondaryActionMUI,
+  Button as ButtonMUI,
+} from '@material-ui/core';
 
 export const Wrapper = styled(BoxMUI)`
   display: block;
@@ -17,6 +18,7 @@ export const Wrapper = styled(BoxMUI)`
 
 export const ListBox = styled(ListBoxMUI)``;
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ListItem: any = styled(ListItemMUI)``;
 
 export const ListItemText = styled(ListItemTextMUI)``;

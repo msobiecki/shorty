@@ -1,4 +1,4 @@
-import classic from "./classic";
+import classic from './classic';
 
 type ThemeType = typeof classic;
 

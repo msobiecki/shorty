@@ -1,33 +1,33 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { useIntl } from "react-intl";
+import { ReactElement } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useIntl } from 'react-intl';
 
-import { Header, Logo, Menu, Content, Footer } from "../../components";
+import { Header, Logo, Menu, Content, Footer } from '../../components';
 
-import config from "../../config";
-import { Grow } from "./Default.styled";
+import config from '../../config';
+import { Grow } from './Default.styled';
 
-type DefaultHelmetProps = { 
-  title?: string; 
-}
+type DefaultHelmetProps = {
+  title?: string;
+};
 
-const DefaultHelmet = ({ title } : DefaultHelmetProps) => {
+const DefaultHelmet = ({ title }: DefaultHelmetProps) => {
   const intl = useIntl();
   return (
     <Helmet>
       <title>
-        {intl.formatMessage({ id: "PAGE_TITLE" }, {title})} | {config.name}
+        {intl.formatMessage({ id: 'PAGE_TITLE' }, { title })} | {config.name}
       </title>
     </Helmet>
   );
 };
 
-type DefaultProps = { 
-  title: string; 
-  children?: JSX.Element | JSX.Element[];
-}
+type DefaultProps = {
+  title: string;
+  children?: ReactElement | ReactElement[];
+};
 
-const Default = ({ title, children } : DefaultProps) => {
+const Default = ({ title, children }: DefaultProps): ReactElement => {
   const intl = useIntl();
 
   return (
@@ -36,19 +36,17 @@ const Default = ({ title, children } : DefaultProps) => {
       <Header>
         <>
           <Logo>{config.name}</Logo>
-          {" | "}
-          {intl.formatMessage({ id: "PAGE_TITLE" }, {title})}
+          {' | '}
+          {intl.formatMessage({ id: 'PAGE_TITLE' }, { title })}
           <Grow />
           <Menu />
         </>
       </Header>
-      <Content>
-        {children}
-      </Content>
+      <Content>{children}</Content>
       <Footer>
         {intl.formatMessage(
           {
-            id: "PAGE_COPYRIGHT",
+            id: 'PAGE_COPYRIGHT',
           },
           { company: config.copyright.company, date: config.copyright.date }
         )}

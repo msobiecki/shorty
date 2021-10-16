@@ -1,7 +1,5 @@
-import '@testing-library/jest-dom';
-
-import React from 'react';
 import { screen } from '@testing-library/react';
+
 import renderApp from '../../helpers/tests/AppProvider';
 
 import Content from './Content';
@@ -29,7 +27,7 @@ describe('Content', () => {
     expect(screen.getByText(getByText)).toBeInTheDocument();
   });
 
-  test('render children element when JSX.Element', () => {
+  test('render children element when ReactElement', () => {
     const getByText = 'CHILDREN_ELEMENT';
     const childrenElement = <div>{'CHILDREN_ELEMENT'}</div>;
     renderApp(<Content>{childrenElement}</Content>);
@@ -39,7 +37,7 @@ describe('Content', () => {
     expect(screen.getByText(getByText)).toBeInTheDocument();
   });
 
-  test('render children element when JSX.Element array', () => {
+  test('render children element when ReactElement array', () => {
     const getByText = 'CHILDREN_ELEMENT';
     const childrenElement = [
       <div key={1}>{'CHILDREN_ELEMENT'}</div>,

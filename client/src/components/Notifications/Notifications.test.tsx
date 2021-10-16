@@ -1,12 +1,9 @@
-import "@testing-library/jest-dom";
+import renderApp from '../../helpers/tests/AppProvider';
 
-import React from "react";
-import renderApp from "../../helpers/tests/AppProvider";
+import Notifications from './Notifications';
 
-import Notifications from "./Notifications";
-
-describe("Notifications", () => {
-  test("render init snapshot", () => {
+describe('Notifications', () => {
+  test('render init snapshot', () => {
     const { container } = renderApp(<Notifications></Notifications>);
 
     expect(container).toMatchInlineSnapshot(`

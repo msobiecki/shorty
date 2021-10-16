@@ -1,9 +1,9 @@
-import { combineReducers } from "redux";
+import { combineReducers } from 'redux';
 
-import { notificationsReducer } from "./notifications";
-import { latestShortsReducer } from "./latestShorts";
-import { createShortReducer } from "./createShort";
-import { searchShortReducer } from "./searchShort";
+import { notificationsReducer } from './notifications';
+import { latestShortsReducer } from './latestShorts';
+import { createShortReducer } from './createShort';
+import { searchShortReducer } from './searchShort';
 
 const reducers = combineReducers({
   notifications: notificationsReducer,
@@ -12,6 +12,6 @@ const reducers = combineReducers({
   searchShort: searchShortReducer,
 });
 
-export type RootState = ReturnType<typeof reducers> ;
+export type RootState = ReturnType<typeof reducers>;
 
 export default reducers;

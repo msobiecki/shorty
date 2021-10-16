@@ -1,6 +1,6 @@
-export const SEARCH_SHORT_REQUEST = "SEARCH_SHORT_REQUEST";
-export const SEARCH_SHORT_RECEIVE = "SEARCH_SHORT_RECEIVE";
-export const SEARCH_SHORT_ERROR = "SEARCH_SHORT_ERROR";
+export const SEARCH_SHORT_REQUEST = 'SEARCH_SHORT_REQUEST';
+export const SEARCH_SHORT_RECEIVE = 'SEARCH_SHORT_RECEIVE';
+export const SEARCH_SHORT_ERROR = 'SEARCH_SHORT_ERROR';
 
 type SearchShortState = {
   status: string;
@@ -16,7 +16,7 @@ type SearchShortType = {
 };
 
 const initialState: SearchShortState = {
-  status: "idle",
+  status: 'idle',
 };
 
 export function searchShortReducer(

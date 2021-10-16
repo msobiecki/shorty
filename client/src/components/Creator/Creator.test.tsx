@@ -1,6 +1,3 @@
-import '@testing-library/jest-dom';
-
-import React from 'react';
 import renderApp from '../../helpers/tests/AppProvider';
 
 import Creator from './Creator';
@@ -8,7 +5,7 @@ import Creator from './Creator';
 describe('Creator', () => {
   test('render init snapshot', () => {
     const { container } = renderApp(
-      <Creator loading={false} title={'TEST_TITLE'} onSubmit={() => {}} />
+      <Creator loading={false} title={'TEST_TITLE'} onSubmit={() => null} />
     );
 
     expect(container).toMatchInlineSnapshot(`

@@ -3,48 +3,48 @@ import {
   CREATE_SHORT_RECEIVE,
   CREATE_SHORT_ERROR,
   createShortReducer as reducer,
-} from "./createShort";
+} from './createShort';
 
-describe("latest shorts reducer", () => {
-  it("should return the initial state", () => {
+describe('latest shorts reducer', () => {
+  it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual({
-      status: "idle",
+      status: 'idle',
     });
   });
 
-  it("should handle CREATE_SHORT_REQUEST", () => {
+  it('should handle CREATE_SHORT_REQUEST', () => {
     expect(
       reducer(
-        { status: "idle" },
+        { status: 'idle' },
         {
           type: CREATE_SHORT_REQUEST,
-          payload: { status: "pending" },
+          payload: { status: 'pending' },
         }
       )
-    ).toEqual({ status: "pending" });
+    ).toEqual({ status: 'pending' });
   });
 
-  it("should handle CREATE_SHORT_RECEIVE", () => {
+  it('should handle CREATE_SHORT_RECEIVE', () => {
     expect(
       reducer(
-        { status: "idle" },
+        { status: 'idle' },
         {
           type: CREATE_SHORT_RECEIVE,
-          payload: { status: "success" },
+          payload: { status: 'success' },
         }
       )
-    ).toEqual({ status: "success" });
+    ).toEqual({ status: 'success' });
   });
 
-  it("should handle CREATE_SHORT_ERROR", () => {
+  it('should handle CREATE_SHORT_ERROR', () => {
     expect(
       reducer(
-        { status: "idle" },
+        { status: 'idle' },
         {
           type: CREATE_SHORT_ERROR,
-          payload: { status: "error" },
+          payload: { status: 'error' },
         }
       )
-    ).toEqual({ status: "error" });
+    ).toEqual({ status: 'error' });
   });
 });

@@ -1,3 +1,3 @@
-import Searcher from "./Searcher";
+import Searcher from './Searcher';
 
 export default Searcher;

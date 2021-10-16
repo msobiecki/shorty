@@ -1,6 +1,3 @@
-import '@testing-library/jest-dom';
-
-import React from 'react';
 import renderApp from '../../helpers/tests/AppProvider';
 
 import Default from './Default';

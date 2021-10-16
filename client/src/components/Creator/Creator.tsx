@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, ReactElement, ChangeEvent, FormEvent } from 'react';
 
 import {
   Wrapper,
@@ -12,7 +12,7 @@ import {
   Grid,
   Navigation,
   Progress,
-} from "./Creator.styled";
+} from './Creator.styled';
 
 type CreatorProps = {
   loading: boolean;
@@ -22,21 +22,25 @@ type CreatorProps = {
 
 type CreatorValuesType = { address?: string; slug?: string };
 
-const Creator = ({ loading = false, title, onSubmit }: CreatorProps) => {
+const Creator = ({
+  loading = false,
+  title,
+  onSubmit,
+}: CreatorProps): ReactElement => {
   const [creatorValues, setCreatorValues] = useState<CreatorValuesType>({
-    address: "",
-    slug: "",
+    address: '',
+    slug: '',
   });
 
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const { address, slug } = creatorValues;
     onSubmit({ address, slug });
-    setCreatorValues({ address: "", slug: "" });
+    setCreatorValues({ address: '', slug: '' });
   };
 
   const handleInputChange = (
-    event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+    event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
     event.preventDefault();
     setCreatorValues({

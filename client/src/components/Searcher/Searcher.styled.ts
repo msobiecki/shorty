@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 import {
   Box as BoxMUI,
@@ -10,7 +10,7 @@ import {
   Input as InputMUI,
   Grid as GridMUI,
   CircularProgress as CircularProgressMUI,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 export const Wrapper = styled(BoxMUI)`
   display: flex;

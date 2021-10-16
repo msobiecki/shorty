@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from 'react-router-dom';
 
-import { Box as BoxMUI, Typography as TypographyMUI } from "@material-ui/core";
+import { Box as BoxMUI, Typography as TypographyMUI } from '@material-ui/core';
 
 export const Wrapper = styled(BoxMUI)`
   display: inline-flex;
@@ -12,7 +12,7 @@ export const Wrapper = styled(BoxMUI)`
 
 export const Link = styled(RouterLink)`
   text-decoration: none;
-  color: ${({theme}) => `${theme.palette.text.primary}`}
+  color: ${({ theme }) => `${theme.palette.text.primary}`};
 `;
 
 export const Title = styled(TypographyMUI)``;

@@ -1,6 +1,6 @@
-export const CREATE_SHORT_REQUEST = "CREATE_SHORT_REQUEST";
-export const CREATE_SHORT_RECEIVE = "CREATE_SHORT_RECEIVE";
-export const CREATE_SHORT_ERROR = "CREATE_SHORT_ERROR";
+export const CREATE_SHORT_REQUEST = 'CREATE_SHORT_REQUEST';
+export const CREATE_SHORT_RECEIVE = 'CREATE_SHORT_RECEIVE';
+export const CREATE_SHORT_ERROR = 'CREATE_SHORT_ERROR';
 
 type CreateShortState = {
   status: string;
@@ -16,7 +16,7 @@ type CreateShortType = {
 };
 
 const initialState: CreateShortState = {
-  status: "idle",
+  status: 'idle',
 };
 
 export function createShortReducer(

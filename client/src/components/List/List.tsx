@@ -1,36 +1,42 @@
-import React from "react";
+import { ReactElement } from 'react';
 
-import { Wrapper, ListBox, ListItem, ListItemText, ListItemSecondaryAction, Button } from "./List.styled";
+import {
+  Wrapper,
+  ListBox,
+  ListItem,
+  ListItemText,
+  ListItemSecondaryAction,
+  Button,
+} from './List.styled';
 
 type ListProps = {
   items: ListItemProps[];
-}
+};
 
 type ListItemProps = {
-  primary?: JSX.Element | string;
-  secondary?: JSX.Element | string;
-  button?: JSX.Element | string;
+  primary?: ReactElement | string;
+  secondary?: ReactElement | string;
+  button?: ReactElement | string;
   onClick?: () => void;
-}
+};
 
-const List = ({items} : ListProps) => {
+const List = ({ items }: ListProps): ReactElement => {
   return (
     <Wrapper>
-      { items.length > 0
-        ?
-          <ListBox>
-            {items.map(({primary, secondary, button, onClick}: ListItemProps, key) => 
+      {items.length > 0 ? (
+        <ListBox>
+          {items.map(
+            ({ primary, secondary, button, onClick }: ListItemProps, key) => (
               <ListItem key={key} button={false}>
-                <ListItemText primary={primary} secondary={secondary}/>
+                <ListItemText primary={primary} secondary={secondary} />
                 <ListItemSecondaryAction>
                   <Button onClick={onClick}>{button}</Button>
                 </ListItemSecondaryAction>
               </ListItem>
-            )}
-          </ListBox>
-        :
-          null
-      }
+            )
+          )}
+        </ListBox>
+      ) : null}
     </Wrapper>
   );
 };

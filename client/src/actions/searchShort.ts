@@ -1,3 +1,8 @@
+import { AnyAction } from 'redux';
+import { ThunkAction } from 'redux-thunk';
+
+import { RootState } from '../reducers';
+
 import { throwNotification } from './helpers/throwNotification';
 
 import {
@@ -10,8 +15,15 @@ import config from '../config';
 
 type SearchShortProps = { slug?: string };
 export const searchShort =
-  ({ slug }: SearchShortProps) =>
-  async (dispatch: any) => {
+  ({
+    slug,
+  }: SearchShortProps): ThunkAction<
+    Promise<boolean | undefined>,
+    RootState,
+    unknown,
+    AnyAction
+  > =>
+  async (dispatch) => {
     if (slug) {
       dispatch({ type: SEARCH_SHORT_REQUEST, payload: { status: 'pending' } });
       return await fetch(`${config.api}/shorty/${slug}`, {

@@ -1,12 +1,11 @@
-import React from "react";
-
-import { Wrapper } from "./Content.styled";
+import { ReactElement } from 'react';
+import { Wrapper } from './Content.styled';
 
 type ContentProps = {
-  children?: JSX.Element | JSX.Element[] | string;
+  children?: ReactElement | ReactElement[] | string;
 };
 
-const Content = ({ children }: ContentProps) => {
+const Content = ({ children }: ContentProps): ReactElement => {
   return <Wrapper>{children}</Wrapper>;
 };
 

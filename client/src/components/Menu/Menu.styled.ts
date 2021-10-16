@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { Box as BoxMUI, Button as ButtonMUI } from "@material-ui/core";
+import { Box as BoxMUI, Button as ButtonMUI } from '@material-ui/core';
 
 export const Wrapper = styled(BoxMUI)`
   display: inline-flex;

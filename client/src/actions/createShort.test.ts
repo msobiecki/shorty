@@ -48,13 +48,16 @@ describe('Create Short Action', () => {
     ];
     const store = mockStore({ shorts: [] });
 
-    return store
-      .dispatch<any>(
-        createShort({ slug: 'TEST_SLUG', address: 'TEST_ADDRESS' })
-      )
-      .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
-      });
+    return (
+      store
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .dispatch<any>(
+          createShort({ slug: 'TEST_SLUG', address: 'TEST_ADDRESS' })
+        )
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        })
+    );
   });
 
   test('create short warning', () => {
@@ -69,6 +72,7 @@ describe('Create Short Action', () => {
     ];
     const store = mockStore({ shorts: [] });
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return store.dispatch<any>(createShort({})).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
     });
@@ -94,12 +98,15 @@ describe('Create Short Action', () => {
     ];
     const store = mockStore({ shorts: [] });
 
-    return store
-      .dispatch<any>(
-        createShort({ slug: 'TEST_SLUG', address: 'TEST_ADDRESS' })
-      )
-      .then(() => {
-        expect(store.getActions()).toEqual(expectedActions);
-      });
+    return (
+      store
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        .dispatch<any>(
+          createShort({ slug: 'TEST_SLUG', address: 'TEST_ADDRESS' })
+        )
+        .then(() => {
+          expect(store.getActions()).toEqual(expectedActions);
+        })
+    );
   });
 });

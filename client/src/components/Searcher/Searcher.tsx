@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useIntl } from "react-intl";
+import { useState, ReactElement, FormEvent, ChangeEvent } from 'react';
+import { useIntl } from 'react-intl';
 
 import {
   Wrapper,
@@ -13,7 +13,7 @@ import {
   Grid,
   Navigation,
   Progress,
-} from "./Searcher.styled";
+} from './Searcher.styled';
 
 type SearcherProps = {
   loading: boolean;
@@ -23,21 +23,25 @@ type SearcherProps = {
 
 type SearcherValuesType = { address?: string; slug?: string };
 
-const Searcher = ({ loading = false, title, onSubmit }: SearcherProps) => {
+const Searcher = ({
+  loading = false,
+  title,
+  onSubmit,
+}: SearcherProps): ReactElement => {
   const intl = useIntl();
   const [searcherValues, setSearcherValues] = useState<SearcherValuesType>({
-    slug: "",
+    slug: '',
   });
 
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const { slug } = searcherValues;
     onSubmit({ slug });
-    setSearcherValues({ slug: "" });
+    setSearcherValues({ slug: '' });
   };
 
   const handleInputChange = (
-    event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
+    event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => {
     event.preventDefault();
     setSearcherValues({
@@ -56,7 +60,7 @@ const Searcher = ({ loading = false, title, onSubmit }: SearcherProps) => {
               <Grid item xs={12}>
                 <FormControl fullWidth>
                   <InputLabel htmlFor="search-slug">
-                    {intl.formatMessage({ id: "INPUT_SLUG" })}
+                    {intl.formatMessage({ id: 'INPUT_SLUG' })}
                   </InputLabel>
                   <Input
                     id="search-slug"
@@ -69,7 +73,7 @@ const Searcher = ({ loading = false, title, onSubmit }: SearcherProps) => {
             </Grid>
             <Navigation>
               <Button type="submit">
-                {intl.formatMessage({ id: "BUTTON_SEARCH" })}
+                {intl.formatMessage({ id: 'BUTTON_SEARCH' })}
               </Button>
             </Navigation>
           </Container>

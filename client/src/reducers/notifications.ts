@@ -1,4 +1,4 @@
-export const THROW_NOTIFICATION = "THROW_NOTIFICATION";
+export const THROW_NOTIFICATION = 'THROW_NOTIFICATION';
 
 type NotificationsState = {
   messages: NotificationType[];
@@ -10,7 +10,7 @@ type NotificationActionType = {
 };
 
 type NotificationType = {
-  status: "info" | "success" | "warning" | "error" | "default";
+  status: 'info' | 'success' | 'warning' | 'error' | 'default';
   message: string;
 };
 
@@ -24,8 +24,8 @@ export function notificationsReducer(
 ): NotificationsState {
   switch (action.type) {
     case THROW_NOTIFICATION: {
-      const newMessages = (state.messages && [...state.messages] ) || []
-      if(action.payload) newMessages.push(action.payload)
+      const newMessages = (state.messages && [...state.messages]) || [];
+      if (action.payload) newMessages.push(action.payload);
       return {
         ...state,
         messages: newMessages,

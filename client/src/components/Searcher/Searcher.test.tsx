@@ -1,6 +1,3 @@
-import '@testing-library/jest-dom';
-
-import React from 'react';
 import renderApp from '../../helpers/tests/AppProvider';
 
 import Searcher from './Searcher';
@@ -8,7 +5,7 @@ import Searcher from './Searcher';
 describe('Searcher', () => {
   test('render init snapshot', () => {
     const { container } = renderApp(
-      <Searcher loading={false} title={'TEST_TITLE'} onSubmit={() => {}} />
+      <Searcher loading={false} title={'TEST_TITLE'} onSubmit={() => null} />
     );
 
     expect(container).toMatchInlineSnapshot(`

@@ -1,7 +1,5 @@
-import '@testing-library/jest-dom';
-
-import React from 'react';
 import { screen } from '@testing-library/react';
+
 import renderApp from '../../helpers/tests/AppProvider';
 
 import Footer from './Footer';
