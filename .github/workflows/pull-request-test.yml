@@ -43,7 +43,7 @@ jobs:
         env:
           SKIP_PREFLIGHT_CHECK: true
           REACT_APP_PROJECT_NAME: TEST Shorty
-          REACT_APP_STAGE: dev
+          REACT_APP_STAGE: development
           REACT_APP_LANGUAGE: en
           REACT_APP_THEME: classic
           REACT_APP_API: http://localhost:8000/api
