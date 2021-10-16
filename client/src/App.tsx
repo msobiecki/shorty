@@ -2,7 +2,6 @@ import { ReactElement } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { Provider as StoreProvider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
-
 import {
   BrowserRouter as RouterProvider,
   Redirect,
