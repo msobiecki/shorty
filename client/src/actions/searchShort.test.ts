@@ -19,7 +19,7 @@ describe('Search Short Action', () => {
   });
 
   test('create short success on found', () => {
-    fetchMock.getOnce('path:/api/shorty/TEST_SLUG', {
+    fetchMock.get('path:/api/shorty/TEST_SLUG', {
       status: 200,
       body: { status: 'success' },
       headers: { 'content-type': 'application/json' },
@@ -56,7 +56,7 @@ describe('Search Short Action', () => {
   });
 
   test('create short error on not found', () => {
-    fetchMock.getOnce('path:/api/shorty/TEST_SLUG', {
+    fetchMock.get('path:/api/shorty/TEST_SLUG', {
       status: 404,
       body: { status: 'error' },
       headers: { 'content-type': 'application/json' },
@@ -82,7 +82,7 @@ describe('Search Short Action', () => {
   });
 
   test('create short error', () => {
-    fetchMock.getOnce('path:/api/shorty/TEST_SLUG', {
+    fetchMock.get('path:/api/shorty/TEST_SLUG', {
       status: 400,
       body: { status: 'error' },
       headers: { 'content-type': 'application/json' },

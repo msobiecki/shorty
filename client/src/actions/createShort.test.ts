@@ -22,7 +22,7 @@ describe('Create Short Action', () => {
   });
 
   test('create short success', () => {
-    fetchMock.postOnce('path:/api/shorty/', {
+    fetchMock.post('path:/api/shorty/', {
       body: { status: 'success' },
       headers: { 'content-type': 'application/json' },
     });
@@ -79,7 +79,7 @@ describe('Create Short Action', () => {
   });
 
   test('create short error', () => {
-    fetchMock.postOnce('path:/api/shorty/', {
+    fetchMock.post('path:/api/shorty/', {
       status: 400,
       body: { status: 'error' },
       headers: { 'content-type': 'application/json' },
